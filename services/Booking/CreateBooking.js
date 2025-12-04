@@ -1,8 +1,8 @@
-const Booking = require('../../models/Booking');
-export const CreateBooking = async (data) => {
+const Booking = require("../../models/Booking");
+const CreateBooking = async (data) => {
     try {
-        const firstname = data.firstname;
-        const lastname = data.lastname;
+        const firstname = data.firstName;
+        const lastname = data.lastName;
         const email = data.email;
         const phone = data.phone;
         const status = data.status;
@@ -31,3 +31,4 @@ export const CreateBooking = async (data) => {
         throw new Error("Error creating booking: " + error.message);
     }
 }
+module.exports = { CreateBooking };

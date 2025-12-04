@@ -1,49 +1,18 @@
-const dbConnect = require('../config/db.config');
+const dbConnect = require('../config/db.config'); 
 const { DataTypes } = require('sequelize');
+
 const Booking = dbConnect.define('Booking', {
-date:{
-    type: DataTypes.STRING,
-    allowNull: false,
-},
-details:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-email:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-firstName: {
-  type: DataTypes.STRING,
-  allowNull: false,
-},
-lastName: {
-  type: DataTypes.STRING,
-  allowNull: false,
-},
-location:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-phone:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-service:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-status:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-teamMember:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
-time:{
-    type:DataTypes.STRING,
-    allowNull:false,
-},
+  date: DataTypes.STRING,
+  details: DataTypes.STRING,
+  email: DataTypes.STRING,
+  firstName: DataTypes.STRING,
+  lastName: DataTypes.STRING,
+  location: DataTypes.STRING,
+  phone: DataTypes.STRING,
+  service: DataTypes.STRING,
+  status: DataTypes.STRING,
+  teamMember: DataTypes.STRING,
+  time: DataTypes.STRING,
 });
-module.exports = Groups;
+
+module.exports = Booking;
