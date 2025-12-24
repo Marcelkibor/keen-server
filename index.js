@@ -7,7 +7,12 @@ const cors = require('cors');
 const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin:[
+    "http://localhost:5173",
+   'https://keenmediahouse.co.ke',
+  'https://www.keenmediahouse.co.ke'
+  ], 
+
 }));
 app.use('/api',routes);
 app.listen(port,()=>{
