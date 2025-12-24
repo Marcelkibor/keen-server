@@ -1,4 +1,4 @@
-const Booking = require('../../models/Booking').default;
+const Booking = require('../../models/Booking');
 const GetBooking = async () => {
     //just retreive all bookings in the database, no filters for now
     const booking = await Booking.findAll();
