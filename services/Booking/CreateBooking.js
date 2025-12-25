@@ -11,7 +11,6 @@ const CreateBooking = async (data) => {
         const time = data.time;
         const location = data.location;
         const service = data.service;
-        const teamMember = data.teamMember;
        const newBooking = await Booking.create({
             firstName: firstname,
             lastName: lastname,
@@ -23,7 +22,6 @@ const CreateBooking = async (data) => {
             time: time,
             location: location,
             service: service,
-            teamMember: teamMember,
         });
         return newBooking;
     }

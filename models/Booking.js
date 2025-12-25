@@ -11,7 +11,6 @@ const Booking = dbConnect.define('Booking', {
   phone: DataTypes.STRING,
   service: DataTypes.STRING,
   status: DataTypes.STRING,
-  teamMember: DataTypes.STRING,
   time: DataTypes.STRING,
 });
 
