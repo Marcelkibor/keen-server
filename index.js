@@ -7,19 +7,6 @@ const cors = require('cors');
 const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors({
-  origin:[
-    "http://localhost:5173",
-   'https://keen-media-house.onrender.com/',
-  'https://www.keenmediahouse.co.ke'
-  ],
-   
-
-}));
-app.use('/api',routes);
-app.listen(port,()=>{
-    console.log(`server running on port ${port}`);
-})
-app.use(cors({
     origin: function (origin, callback) {
       const allowedOrigins = [
     "http://localhost:5173",
@@ -34,5 +21,10 @@ app.use(cors({
       }
     },
   }));
+app.use('/api',routes);
+app.listen(port,()=>{
+    console.log(`server running on port ${port}`);
+})
+
 
   
