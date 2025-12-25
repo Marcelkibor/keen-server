@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors({
   origin:[
     "http://localhost:5173",
-   'https://keenmediahouse.co.ke',
+   'https://keen-media-house.onrender.com/',
   'https://www.keenmediahouse.co.ke'
   ], 
 
